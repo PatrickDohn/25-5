@@ -6,11 +6,12 @@ import Countdown from './components/Countdown'
 
 function App() {
   const [timer, setTimer] = useState(25)
+  const [breakTimer, setbreakTimer] = useState(5)
   return (
     <div className="App">
-      <Timer timer={timer} />
-      <BreakTime />
-      <Countdown />
+      <Timer timer={timer} setTimer={setTimer} />
+      <BreakTime breakTimer={breakTimer} setbreakTimer={setbreakTimer} />
+      <Countdown timer={timer} />
     </div>
   );
 }

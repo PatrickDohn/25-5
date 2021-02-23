@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useState, useRef } from 'react'
 import '../App.css'
 
-function Countdown() {
+function Countdown({ timer }) {
+    const [isActive, setIsActive] = useState(false)
+    const [isPaused, setIsPaused] = useState(false)
+    const countRef = useRef(null)
+
     return (
         <div className="countdown-container">
-            This is Countdown
+            <div className="countdown">{timer}</div>
+            <div className="button-container">
+                <button>Start</button>
+                <button>Stop</button>
+            </div>
         </div>
     )
 }
