@@ -5,8 +5,8 @@ import BreakTime from './components/BreakTime'
 import Countdown from './components/Countdown'
 
 function App() {
-  const [timer, setTimer] = useState(25)
-  const [breakTimer, setbreakTimer] = useState(5)
+  const [timer, setTimer] = useState(60 * 25)
+  const [breakTimer, setbreakTimer] = useState(300)
   return (
     <div className="App">
       <Timer timer={timer} setTimer={setTimer} />
