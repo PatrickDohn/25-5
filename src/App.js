@@ -40,16 +40,13 @@ const handleStartStop = () => {
         setIntervalId(newIntervalId)
     }
 }
-const handleReset = () => {
-
-}
 
 
   return (
     <div className="App">
       <Timer timer={timer} setTimer={setTimer} />
       <BreakTime breakTimer={breakTimer} setbreakTimer={setbreakTimer} />
-      <Countdown handleReset={handleReset} isStarted={isStarted} timeLeft={timeLeft} currentSessionType={currentSessionType} handleStartStop={handleStartStop} breakTimer={breakTimer} timer={timer} />
+      <Countdown isStarted={isStarted} timeLeft={timeLeft} currentSessionType={currentSessionType} handleStartStop={handleStartStop} breakTimer={breakTimer} timer={timer} />
     </div>
   );
 }
